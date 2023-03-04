@@ -1,0 +1,23 @@
+--'sha1:b6d1b92ef7c4:b625e8c784bac679f1cf1e9dbb93e2856bc3370f'
+
+## Installation - Java
+
+- https://bhargavamin.com/how-to-do/setting-up-java-environment-variable-on-ec2/
+
+
+## Installation - git
+- https://cloudaffaire.com/how-to-install-git-in-aws-ec2-instance/
+
+-	### Code Repo
+
+		git clone https://github.com/vasubajaj7/ApacheSparkAcademy.git 
+
+## Installation Jupyter Notebook 
+- https://dataschool.com/data-modeling-101/running-jupyter-notebook-on-an-ec2-server/
+
+
+
+
+
+
+

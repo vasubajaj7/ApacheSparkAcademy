@@ -20,6 +20,8 @@ if __name__ == "__main__":
         .option("maxFilesPerTrigger", 1) \
         .load()
 
+    raw_df.printSchema()
+
     explode_df = raw_df.selectExpr("InvoiceNumber", "CreatedTime", "StoreID", "PosID",
                                    "CustomerType", "PaymentMethod", "DeliveryType", "DeliveryAddress.City",
                                    "DeliveryAddress.State",
@@ -32,6 +34,8 @@ if __name__ == "__main__":
         .withColumn("ItemQty", expr("LineItem.ItemQty")) \
         .withColumn("TotalValue", expr("LineItem.TotalValue")) \
         .drop("LineItem")
+
+    flattened_df.printSchema()
 
     invoiceWriterQuery = flattened_df.writeStream \
         .format("json") \
